@@ -74,9 +74,9 @@
 							"pm.environment.set(\"authToken\", pm.response.json().token);\r",
 							"\r",
 							"if (pm.response.json() == true) {\r",
-							"    postman.setNextRequest(\"Add book to user\")\r",
+							"    pm.execution.setNextRequest(\"39476116-36472a3f-8fca-4e45-831e-0f76797d96af\")\r",
 							"} else {\r",
-							"    postman.setNextRequest(\"Get auth token\")\r",
+							"    pm.execution.setNextRequest(\"64527816-6402-4c5b-bb41-03a87f3a3048\")\r",
 							"}"
 						],
 						"type": "text/javascript",
