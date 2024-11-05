@@ -11,10 +11,10 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "60e4dcb4-0a17-43c1-a662-89a55d96a25e",
+						"id": "bd5b4d43-8482-48a5-91ae-0a3c9551e0ab",
 						"exec": [
-							"pm.environment.set(\"userName\", pm.response.json().name);\r",
-							"pm.environment.set(\"userId\", pm.response.json().id);"
+							"pm.environment.set(\"userName\", pm.response.json().username);\r",
+							"pm.environment.set(\"userId\", pm.response.json().userID);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -30,7 +30,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"userName\": \"user\",\r\n  \"password\": \"pass\"\r\n}",
+					"raw": "{\r\n  \"userName\": \"{{$randomUserName}}\",\r\n  \"password\": \"Password123!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
