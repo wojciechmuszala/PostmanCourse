@@ -43,6 +43,23 @@
 		},
 		{
 			"name": "Check auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3ada4a5c-3299-4440-9bfd-890c36936b81",
+						"exec": [
+							"if (pm.response.json() == true) {\r",
+							"    pm.execution.setNextRequest(\"39476116-36472a3f-8fca-4e45-831e-0f76797d96af\")\r",
+							"} else {\r",
+							"    pm.execution.setNextRequest(\"64527816-6402-4c5b-bb41-03a87f3a3048\")\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "fa631f6e-c212-4bbb-b0ff-e21880372fe6",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -71,13 +88,7 @@
 					"script": {
 						"id": "443a26ad-ddaf-42fb-a2b8-f4985e61b8ce",
 						"exec": [
-							"pm.environment.set(\"authToken\", pm.response.json().token);\r",
-							"\r",
-							"if (pm.response.json() == true) {\r",
-							"    pm.execution.setNextRequest(\"39476116-36472a3f-8fca-4e45-831e-0f76797d96af\")\r",
-							"} else {\r",
-							"    pm.execution.setNextRequest(\"64527816-6402-4c5b-bb41-03a87f3a3048\")\r",
-							"}"
+							"pm.environment.set(\"authToken\", pm.response.json().token);"
 						],
 						"type": "text/javascript",
 						"packages": {}
