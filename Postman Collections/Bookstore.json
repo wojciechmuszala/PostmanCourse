@@ -71,7 +71,13 @@
 					"script": {
 						"id": "443a26ad-ddaf-42fb-a2b8-f4985e61b8ce",
 						"exec": [
-							"pm.environment.set(\"authToken\", pm.response.json().token);"
+							"pm.environment.set(\"authToken\", pm.response.json().token);\r",
+							"\r",
+							"if (pm.response.json() == true) {\r",
+							"    postman.setNextRequest(\"Add book to user\")\r",
+							"} else {\r",
+							"    postman.setNextRequest(\"Get auth token\")\r",
+							"}"
 						],
 						"type": "text/javascript",
 						"packages": {}
