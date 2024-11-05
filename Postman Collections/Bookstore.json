@@ -139,13 +139,27 @@
 		},
 		{
 			"name": "Get ISBN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a483ca3-6bbe-48d2-91c4-0812d1c47341",
+						"exec": [
+							"pm.environment.set(\"ISBN\", pm.response.json().books[0].isbn);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "4d48456f-c671-416d-a913-6a926d136b22",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "{{baseUrl}}/BookStore/v1/Books"
 			},
 			"response": []
 		},
