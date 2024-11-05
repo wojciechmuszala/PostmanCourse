@@ -50,9 +50,9 @@
 						"id": "3ada4a5c-3299-4440-9bfd-890c36936b81",
 						"exec": [
 							"if (pm.response.json() == true) {\r",
-							"    pm.execution.setNextRequest(\"39476116-36472a3f-8fca-4e45-831e-0f76797d96af\")\r",
+							"    pm.execution.setNextRequest(\"Add book to user\")\r",
 							"} else {\r",
-							"    pm.execution.setNextRequest(\"64527816-6402-4c5b-bb41-03a87f3a3048\")\r",
+							"    pm.execution.setNextRequest(\"Get auth token\")\r",
 							"}"
 						],
 						"type": "text/javascript",
